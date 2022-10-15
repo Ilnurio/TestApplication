@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza_background" />
+
+    <TextView
+        android:id="@+id/tvItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Имя Пиццы"
+        android:layout_marginStart="8dp"
+        android:textColor="#020202"
+        app:layout_constraintStart_toEndOf="@id/imView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="24sp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvReview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imView"
+        app:layout_constraintTop_toBottomOf="@id/tvItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:id="@+id/bPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="от 345 р"
+        android:textColor="#E91E63"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReview"
+        android:background="@drawable/price_caption_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="Суши">Суши</string>
+    <string name="Напитки">Напитки</string>
+    <string name="Комбо">Комбо</string>
+    <string name="Бургеры">Бургеры</string>
+</resources>

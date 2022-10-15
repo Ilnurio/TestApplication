@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F3EFEF">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll">
+
+            <ImageButton
+                android:id="@+id/bQrCode"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/qr_code"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/bSelCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F3EFEF"
+                android:text="Выберите город"
+                android:textColor="#A19D9D"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginTop="30dp"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/adv1"
+                        android:layout_width="380dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/adv1"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                        app:srcCompat="@drawable/adv2" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="380dp"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        app:srcCompat="@drawable/adv3" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#EDEDED"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:backgroundTint="@color/white"
+                    android:minHeight="48dp"
+                    android:text="Пицца"
+                    android:textColor="#A19D9D"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/b2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/Суши"
+                    android:textColor="#A19D9D"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/b3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/Напитки"
+                    android:textColor="#A19D9D"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/b4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/Комбо"
+                    android:textColor="#A19D9D"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/b5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/Бургеры"
+                    android:textColor="#A19D9D" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id = "@+id/recyclerItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingBottom="40dp"
+        android:clipToPadding="false"/>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDEDED"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:menu="@menu/bottom_menu"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
